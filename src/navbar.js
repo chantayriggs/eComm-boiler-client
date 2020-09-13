@@ -20,7 +20,9 @@ const Navbar = () => {
     return (
         <Router>
             <div className="navbar">
-            <NavLink className="link" to="/"><img src={Logo} /></NavLink>
+                <div className="logo">
+                    <NavLink className="link" to="/"><img src={Logo} /></NavLink>
+                </div>
                 <div className="link-wrapper">
                     <NavLink className="link hover" to="/about-us">About</NavLink>
                     <NavLink className="link hover" to="/products">Products</NavLink>

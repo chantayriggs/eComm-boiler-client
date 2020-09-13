@@ -2,13 +2,18 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 100px;
+    height: 150px;
     letter-spacing: 1px;
 
-    img {
-        height: 90px;
-        padding-left: 40px;
+    .logo  {
+        padding-left: 110px;
+        img {
+            border-radius: 50%;
+            height: 90px;
+        }
     }
+
+
 
     .link-wrapper {
         display: flex;
