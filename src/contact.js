@@ -1,20 +1,10 @@
 import React from 'react'
-import { NavLink } from "react-router-dom"
+import Banner from "./banner"
 
 const Contact = () => {
     return (
         <div>
-            <div className="banner-wrapper" >
-                <div className="banner">
-                    <div className="header">Contact</div>
-                    <div className="path"> 
-                        <NavLink to="/">Home</NavLink>
-                        <i class="fas fa-angle-right"></i>
-                        <div className="current">Contact</div>
-                    </div>
-                </div>
-                
-            </div>
+            <Banner title={"Contact"} path={"Contact"} />
         </div>
     )
 }

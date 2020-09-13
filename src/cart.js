@@ -1,11 +1,12 @@
-import React from 'react';
+import React from 'react'
+import Banner from "./banner"
 
 const Cart = () => {
     return (
         <div>
-            cart
+            <Banner title={"Shopping Cart"} path={"Cart"} />
         </div>
-    );
-};
+    )
+}
 
-export default Cart;
+export default Cart
