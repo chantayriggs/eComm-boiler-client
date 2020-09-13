@@ -3,19 +3,16 @@
     justify-content: space-between;
     align-items: center;
     height: 100px;
-    border: 1px solid gray;
     letter-spacing: 1px;
-
-    .logo {
-        padding-left: 40px;
-    }
 
     img {
         height: 90px;
+        padding-left: 40px;
     }
 
     .link-wrapper {
         display: flex;
+        padding-right: 40px;
 
         .link {
             padding-right: 20px;
@@ -45,6 +42,7 @@
             font-size: .85em;
             justify-content: space-around;
             width: 140px;
+            background-color: white;
         }
 
         .category a {
@@ -52,7 +50,6 @@
             height: 100%;
             display: flex;
             align-items: center;
-            background-color: white;
             text-decoration: none;
             color: black;
         }
@@ -60,6 +57,19 @@
         i {
             -webkit-text-stroke: 1px white;
         }
+
+        .searchbar {
+            width: 200px;
+            margin-right: 30px;
+            border-bottom: 1px solid black;
+        }
+
+        .searchbar input {
+            outline: none;
+            
+            border: none;
+        }
+
     }
 }
 

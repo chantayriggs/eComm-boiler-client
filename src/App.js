@@ -9,9 +9,6 @@ import "./styles/main.scss"
 
 const App = () => {
 
-	
-
-
 	return (
 		<div>
 			<Navbar />

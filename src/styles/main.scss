@@ -5,6 +5,8 @@ body {
 }
 
 $highlight: green;
+$banner: #f7f8fb;
 
 
-@import "./navbar.scss"
+@import "./navbar.scss";
+@import "./about.scss";

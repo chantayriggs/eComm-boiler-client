@@ -5,7 +5,6 @@ import Featured from "./featured"
 import Accessories from "./accessories"
 import Reviews from "./reviews"
 import Qualities from "./qualities"
-import Footer from "./footer"
 
 const Home = () => {
     return (

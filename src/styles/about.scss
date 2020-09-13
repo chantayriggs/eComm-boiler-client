@@ -1,0 +1,43 @@
+.banner-wrapper {
+    height: 100px;
+    background-color: $banner;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    letter-spacing: 2px;
+
+    .banner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 85%;
+
+        .header {
+            font-weight: 700;
+            font-size: 2em;
+        }
+
+        .path {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            i {
+                -webkit-text-stroke: 1px $banner;
+                padding-left: 10px;
+            }
+            .current {
+                color: gray;
+                padding: 0px 10px;
+            }
+        }
+
+        a {
+            text-decoration: none;
+            color: black;
+        }
+    }
+
+}
+
+
+
