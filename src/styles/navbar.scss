@@ -6,10 +6,10 @@
     letter-spacing: 1px;
 
     .logo  {
-        padding-left: 110px;
+        padding-left: 90px;
         img {
             border-radius: 50%;
-            height: 90px;
+            height: 110px;
         }
     }
 
@@ -38,10 +38,10 @@
 
         .dropdown-menu {
             margin-top: 20px;
-            border: 1px solid black;
+            border: 1px solid gray;
             position: absolute;
             z-index: 1;
-            height: 140px;
+            height: 160px;
             display: flex;
             flex-direction: column;
             font-size: .85em;

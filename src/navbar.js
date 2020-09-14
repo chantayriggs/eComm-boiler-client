@@ -1,24 +1,17 @@
 import React, { useState } from 'react'
 
-import { BrowserRouter as Router, Switch, Route, NavLink } from "react-router-dom"
-
-import Home from "./home"
-import About from "./about"
-import Products from "./products"
-import Contact from "./contact"
-import Cart from "./cart"
+import { NavLink } from "react-router-dom"
 
 import Logo from "./images/logo.png"
 
 
-const Navbar = () => {
+const Navbar = () => { 
 
 
     const [menu, setMenu] = useState(false)
     const [search, setSearch] = useState(false)
 
     return (
-        <Router>
             <div className="navbar">
                 <div className="logo">
                     <NavLink className="link" to="/"><img src={Logo} /></NavLink>
@@ -53,24 +46,6 @@ const Navbar = () => {
                 </div>
             </div>
 
-            <Switch>
-                <Route exact path="/">
-                    <Home />
-                </Route>
-                <Route path="/about-us">
-                    <About />
-                </Route>
-                <Route path="/products">
-                    <Products />
-                </Route>
-                <Route path="/contact">
-                    <Contact />
-                </Route>
-                <Route path="/cart">
-                    <Cart />
-                </Route>
-            </Switch>
-        </Router>
     )
 }
 

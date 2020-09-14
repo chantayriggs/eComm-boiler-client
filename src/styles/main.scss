@@ -6,7 +6,9 @@ body {
 
 $highlight: green;
 $banner: #f7f8fb;
+$footer: #202425;
 
 
 @import "./navbar.scss";
 @import "./banner.scss";
+@import "./footer.scss";

@@ -4,7 +4,7 @@ import Banner from "./banner"
 const Cart = () => {
     return (
         <div>
-            <Banner title={"Shopping Cart"} path={"Cart"} />
+            <Banner title={"My Cart"} path={"Shopping Cart"} />
         </div>
     )
 }
