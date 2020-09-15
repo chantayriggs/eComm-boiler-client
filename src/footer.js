@@ -1,7 +1,7 @@
 import React from 'react'
 import { NavLink } from "react-router-dom"
 
-import Logo from "./images/logo.png"
+import Logo from "./images/logo_only.jpg"
 
 const Footer = () => {
     return (
@@ -49,7 +49,7 @@ const Footer = () => {
                             <div>email@gmail.com</div>
                         </div>
                         <div className="info" >
-                        <i class="fas fa-phone"></i>
+                            <i class="fas fa-phone"></i>
                             <div>858 123 4567</div>
                         </div>
                     </div>

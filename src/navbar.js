@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 
 import { NavLink } from "react-router-dom"
 
-import Logo from "./images/logo.png"
+import Logo from "./images/logo.jpg"
 
 
 const Navbar = () => { 
@@ -12,6 +12,9 @@ const Navbar = () => {
     const [search, setSearch] = useState(false)
 
     return (
+            <div className="navbar-wrapper">
+
+            
             <div className="navbar">
                 <div className="logo">
                     <NavLink className="link" to="/"><img src={Logo} /></NavLink>
@@ -44,6 +47,7 @@ const Navbar = () => {
                     <NavLink className="link hover" to="/contact">Contact</NavLink>
                     <NavLink className="link hover" to="/cart"><i class="fas fa-shopping-cart"></i></NavLink>
                 </div>
+            </div>
             </div>
 
     )
