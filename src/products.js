@@ -8,11 +8,8 @@ import mockProducts from "./mockProducts"
 const Products = () => {
 
     const [ category, setCategory ] = useState("All Products")
-
     const [ categoryList, setCategoryList] = useState(null)
-
     const [ untouchedProducts, setUntouchedProducts] = useState(null)
-
     const [ shownProducts, setShownProducts ] = useState(null)
 
 
@@ -65,20 +62,16 @@ const Products = () => {
                                 <div className="categories-list">
 
                                     {
-                                        Object.entries(categoryList).map( category => (
-                                            <div onClick={ () => handleCategoryClick(category[0])} className="category">
+                                        Object.entries(categoryList).map( currentCategory => (
+                                            <div onClick={ () => handleCategoryClick(currentCategory[0])} className={ category === currentCategory[0] ? "category chosen" : "category" }>
                                                 <div > 
                                                     <i class="fas fa-angle-right"></i>
-                                                    <span >{category[0]}</span>
+                                                    <span >{currentCategory[0]}</span>
                                                 </div>
-                                                <div className="amount">({category[1]})</div>
+                                                <div className="amount">({currentCategory[1]})</div>
                                             </div>
                                         ))
                                     }
-
-
-
-
                                 </div>
                             </div>
                             <div className="right">
