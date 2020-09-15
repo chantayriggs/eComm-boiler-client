@@ -7,10 +7,6 @@ import Logo from "./images/logo.jpg"
 
 const Navbar = () => { 
 
-
-    const [menu, setMenu] = useState(false)
-    const [search, setSearch] = useState(false)
-
     return (
             <div className="navbar-wrapper">
 
@@ -22,7 +18,10 @@ const Navbar = () => {
                 <div className="link-wrapper">
                     <NavLink className="link hover" to="/about-us">About</NavLink>
                     <NavLink className="link hover" to="/products">Products</NavLink>
-                    <div 
+
+
+
+                    {/* <div 
                         class="link category-dropdown"
                         onMouseOver={() => setMenu(true)}
                         >
@@ -42,7 +41,9 @@ const Navbar = () => {
                             : null
                         }
 
-                    </div>
+                    </div> */}
+
+                    
 
                     <NavLink className="link hover" to="/contact">Contact</NavLink>
                     <NavLink className="link hover" to="/cart"><i class="fas fa-shopping-cart"></i></NavLink>

@@ -5,14 +5,12 @@ import ProductCard from "./productCard"
 
 import mockProducts from "./mockProducts"
 
-const Products = () => {
+const Products = props => {
 
     const [ category, setCategory ] = useState("All Products")
     const [ categoryList, setCategoryList] = useState(null)
     const [ untouchedProducts, setUntouchedProducts] = useState(null)
     const [ shownProducts, setShownProducts ] = useState(null)
-
-
 
     const getCategories = () => {
         let categories = {}
@@ -39,17 +37,20 @@ const Products = () => {
         
     }
 
-
     useEffect( () => {
-        getCategories()
+
+        // get products from app.js, where the axios call to get all products will be made
+
         setShownProducts(mockProducts)
         setUntouchedProducts(mockProducts)
+        getCategories()
     }, [])
 
 
     return (
         
         <div>
+            {/* TODO loading */}
             { categoryList === null ||  shownProducts === null ? <div></div> : 
             <div>
                 <Banner title={"All Products"} path={"Products"} />
@@ -78,7 +79,7 @@ const Products = () => {
                                 <div className="product-card-wrapper">
                                     {
                                         shownProducts.map( product => (
-                                            <ProductCard product={product} />
+                                            <ProductCard cartItems={props.cartItems} setCartItems={props.setCartItems} product={product} />
                                         ))
                                     }
                                 </div>

@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useEffect, useState } from "react"
 
 import { BrowserRouter as Router, Switch, Route, NavLink } from "react-router-dom"
 
@@ -10,6 +10,7 @@ import Cart from "./cart"
 import Navbar from "./navbar"
 import Footer from "./footer"
 import Redirect from "./redirect"
+import ProductDetail from "./productDetail"
 
 import "./styles/main.scss"
 
@@ -17,7 +18,19 @@ import "./styles/main.scss"
 
 const App = () => {
 
+
+	// cookies if they're a guest, set cart items to user once we have login.
+	const [ cartItems, setCartItems ] = useState(null)
+
+	useEffect( () => {
+		setCartItems([])
+
+	}, [])
+
+
 	return (
+		<div>
+			{ cartItems === null ? <div> Loading... </div> :
 			<Router>
 				<Navbar />
 			
@@ -29,23 +42,33 @@ const App = () => {
 						<About />
 					</Route>
 					<Route path="/products">
-						<Products />
+						<Products  cartItems={cartItems} setCartItems={setCartItems}  />
 					</Route>
 					<Route path="/contact">
 						<Contact />
 					</Route>
 					<Route path="/cart">
-						<Cart />
+						<Cart cartItems={cartItems} setCartItems={setCartItems} />
 					</Route>
 					<Route exact path="/instagram" component={Redirect} />
 					<Route exact path="/youtube" component={Redirect} />
 					<Route exact path="/twitter" component={Redirect} />
 					<Route exact path="/facebook" component={Redirect} />
+					<Route
+						path="/product/:slug"
+						render={props => (
+						<ProductDetail
+							{...props}
+						/>
+						)}
+					/>
 				</Switch>
 
-				<Footer />
+				<Footer/>
 			</Router>
+			}
 
+		</div>
 
 	)
 }

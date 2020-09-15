@@ -1,0 +1,93 @@
+.product-detail-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 100px 0px;
+
+    .content-wrapper {
+        width: 60%;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 50px;
+        
+    }
+
+    .image-wrapper {
+        box-shadow: 0 0 17px rgba(0,0,0,0.1);
+        height: 500px;
+        width: 600px;
+        display: flex;
+        border-radius: 3px;
+        align-items: center;
+        justify-content: center;
+        
+
+        img {
+            height: 99%;
+            width: 99%;
+            border-radius: 3px;
+            object-fit: cover;
+        }
+    }
+
+    .right  {
+
+        display: flex;
+        flex-direction: column;
+        height: 40%;
+        justify-content: space-between;
+
+        .detail-title {
+            text-decoration: none;
+            color: black;
+            font-weight: 500;
+            letter-spacing: 1px;
+            font-size: 1.2em;
+        }
+    
+        .detail-category {
+            color: gray;
+            letter-spacing: 1px;
+            font-size: .9em;
+        }
+    
+        .detail-price {
+            font-family: sans-serif;
+        }
+        
+        .detail-button {
+    
+            button {
+                font-family: 'Raleway', sans-serif;
+                display:inline-block;
+                letter-spacing: 1px;
+                padding: 13px;
+                border:0.1em solid $highlight;
+                margin:0 0.3em 0.3em 0;
+                border-radius:0.12em;
+                box-sizing: border-box;
+                text-decoration:none;
+                text-align:center;
+                color:$highlight;
+                background-color: white;
+                transition: all 0.2s;
+                width: 120px;
+            }
+        
+            button:hover{
+                background-color:$highlight;
+                color:white;
+        
+                cursor: pointer;
+            }
+        }
+
+    }
+    .detail-description {
+        padding-top: 30px;
+        font-size: .9em;
+        line-height: 25px;
+        width: 60%;
+    }
+
+}

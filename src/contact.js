@@ -35,18 +35,18 @@ const Contact = () => {
                         <div className="form-wrapper" >
                             <div className="header">Get in Touch</div>
                             <div className="slogan" >A very cool slogan can go here, Lorem ipsum dolor sit amet, consectetur adipiscing elit. </div>
-                            <form>
+                            <form action="https://formspree.io/mleorbko" method="POST">
                                 <div className="inputs-wrapper" >
                                     <div className="row">
-                                        <input type="text" placeholder="Full Name *" />
-                                        <input type="text" placeholder="Email *" />
+                                        <input type="text" placeholder="Full Name *" name="name" />
+                                        <input type="text" placeholder="Email *" name="_replyto" />
                                     </div>
                                     <div className="row">
                                         <input type="text" placeholder="Phone" />
                                         <input type="text" placeholder="Subject " />
                                     </div>
-                                    <textarea className="row" placeholder="Message *" />
-                                    <button type="submit">Send Message</button>
+                                    <textarea className="row" name="message" placeholder="Message *" />
+                                    <button type="submit" value="send">Send Message</button>
                                 </div>
 
                             </form>

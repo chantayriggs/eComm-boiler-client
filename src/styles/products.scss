@@ -37,6 +37,11 @@
                     justify-content: space-between;
                     padding: 10px 0px;
                     cursor: pointer;
+                    transition: 0.2s;
+
+                    &:hover {
+                        color: $highlight;
+                    }
                 }
 
                 .chosen {
@@ -96,9 +101,11 @@
 
     
         .card-title {
-            font-weight: 500;
-            letter-spacing: 1px;
-            font-size: 1.2em;
+                text-decoration: none;
+                color: black;
+                font-weight: 500;
+                letter-spacing: 1px;
+                font-size: 1.2em;
         }
 
         .card-category {

@@ -1,0 +1,88 @@
+
+
+.cart-wrapper {
+    display: flex;
+    justify-content: center;
+    .cart-content-wrapper {
+        width: 70%;
+
+        .items-payment-wrapper {
+            margin: 40px;
+            display: grid;
+            grid-template-columns: 1.7fr 1fr;
+            gap: 100px;
+
+            .cart-item {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-bottom: 20px;
+                border-bottom: 1px solid #dddddd;
+                padding-bottom: 20px;
+
+                .price {
+                    font-family: sans-serif;
+                    font-size: .9em;
+                }
+
+                .image-wrapper {
+                    img {
+                        height: 125px;
+                        width: 125px;
+                        object-fit: cover;
+                        border-radius: 3px;
+                    }
+                }
+                i {
+                    -webkit-text-stroke: 1px white;
+                    padding-right: 40px;
+                    font-size: .6em;
+                }
+
+                .quantity {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    i {
+                        padding: 0px 10px;
+                        font-size: .7em;
+                    }
+                    .number {
+                        border: 1px solid #dddddd;
+                        width: 20px;
+                        height: 20px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+
+                    }
+                }
+            }
+
+            .payment {
+                border: 1px solid black;
+                height: 500px;
+            }
+
+            .bottom {
+                display: flex;
+                justify-content: space-between;
+                padding-top: 20px;
+                a {
+                    display: flex;
+                    align-items: center;
+                    text-decoration: none;
+                    color: $highlight;
+                    i {
+                        -webkit-text-stroke: 1px white;
+                        font-size: .8em;
+                        padding-right: 10px;
+                    }
+                }
+            }
+
+        }
+
+
+    }
+}
