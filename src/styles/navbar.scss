@@ -2,6 +2,9 @@
 .navbar-wrapper {
     display: flex;
     justify-content: center;
+    margin-bottom: 4px;
+    box-shadow: 0 0 7px rgba(0,0,0,0.1);
+    
 }
 
 .navbar {
@@ -11,6 +14,7 @@
     height: 150px;
     letter-spacing: 1px;
     width: 95%;
+    
 
     .logo  {
         img {

@@ -12,10 +12,18 @@ const Footer = () => {
                         <img src={Logo} />
                     </div>
                     <div className="icons" >
-                        <i class="fab fa-instagram"></i>
-                        <i class="fab fa-youtube"></i>
-                        <i class="fab fa-twitter"></i>
-                        <i class="fab fa-facebook-f"></i>
+                        <a href="instagram" target="_blank">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="youtube" target="_blank">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                        <a href="twitter" target="_blank">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="facebook" target="_blank">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
                     </div>
                 </div>
                 <div className="useful-links-wrapper">
@@ -34,6 +42,8 @@ const Footer = () => {
                         <NavLink to="/products">Category 1</NavLink>
                         <NavLink to="/products">Category 2</NavLink>
                         <NavLink to="/products">Category 3</NavLink>
+                        <NavLink to="/products">Category 4</NavLink>
+                        <NavLink to="/products">Category 5</NavLink>
                     </div>
 
                 </div>

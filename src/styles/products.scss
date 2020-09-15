@@ -1,0 +1,154 @@
+.products-page-wrapper {
+    display: flex;
+    justify-content: center;
+
+    .category-header {
+        letter-spacing: 1px;
+        padding: 50px 0px;
+        display: flex;
+        justify-content: flex-end;
+        font-size: 1.7em;
+        font-weight: 700;
+    }
+    .products-page {
+        width: 60%;
+
+        .product-content-wrapper {
+            display: grid;
+            grid-template-columns: 1fr 4fr;
+            
+            .left {
+                
+                .header {
+                    letter-spacing: 1px;
+                    font-size: 1.3em;
+                    font-weight: 700;
+                    padding-bottom: 20px;
+                }
+
+                i {
+                    padding-right: 10px;
+                    -webkit-text-stroke: 1px white;
+                }
+
+                .category {
+                    width: 100%;
+                    display: flex;
+                    justify-content: space-between;
+                    padding: 10px 0px;
+                    cursor: pointer;
+                }
+
+                .amount {
+                    font-family: sans-serif;
+                }
+            }
+
+            .right {
+                .product-card-wrapper {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-end;
+                    width: 100%;
+                }
+
+            }
+        }
+    }
+}
+
+
+// Product Card
+
+.product-card {
+    border-radius: 3px;
+    box-shadow: 0 0 7px rgba(0,0,0,0.1);
+    height: 200px;
+    width: 95%;
+    display: grid;
+    grid-template-columns: 1.1fr 2.5fr .8fr .2fr;
+    align-items: center;
+    margin-bottom: 30px;
+
+    .product-image {
+
+        padding-left: 25px;
+
+        img {
+            height: 150px;
+            width: 150px;
+            object-fit: cover;
+            border-radius: 3px;
+        }
+
+    }
+
+    .card-info {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 150px;
+
+
+    
+        .card-title {
+            font-weight: 500;
+            letter-spacing: 1px;
+            font-size: 1.2em;
+        }
+
+        .card-category {
+            color: gray;
+            letter-spacing: 1px;
+            font-size: .9em;
+        }
+
+        .card-price {
+            font-family: sans-serif;
+        }
+
+        .card-description {
+            font-size: .9em;
+            line-height: 25px;
+        }
+
+
+    }
+
+    .card-button {
+        display: flex;
+        width: 100%;
+        justify-content: flex-end;
+
+        button {
+            font-family: 'Raleway', sans-serif;
+            display:inline-block;
+            letter-spacing: 1px;
+            padding: 13px;
+            border:0.1em solid $highlight;
+            margin:0 0.3em 0.3em 0;
+            border-radius:0.12em;
+            box-sizing: border-box;
+            text-decoration:none;
+            text-align:center;
+            color:$highlight;
+            background-color: white;
+            transition: all 0.2s;
+            width: 120px;
+        }
+
+        button:hover{
+            background-color:$highlight;
+            color:white;
+
+            cursor: pointer;
+        }
+    }
+
+
+
+    
+    
+
+
+}
