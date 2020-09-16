@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import { Link } from "react-router-dom"
 
 
@@ -11,9 +11,12 @@ const ProductCard = props => {
     const category = props.product.category
     const description = props.product.description
 
+    const [ beenClicked, setBeenClicked ] = useState(false)
+
 
     const handleAddToCart = id => {
         props.cartItems.push(id)
+        setBeenClicked(true)
     }
 
     return (
@@ -31,7 +34,7 @@ const ProductCard = props => {
                 <div className="card-price">$ {price}</div>
             </div>
             <div className="card-button">
-                <button onClick={() => handleAddToCart(id)} >Add to Cart</button>
+                <button onClick={() => handleAddToCart(id)} >{ beenClicked ? "Added to Cart" : "Add to Cart" }</button>
             </div>
             <div></div>
             
