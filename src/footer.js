@@ -62,7 +62,7 @@ const Footer = props => {
                         </div>
                         <div className="info" >
                             <i class="fas fa-phone"></i>
-                            <div className="phone">(858) 123-4567</div>
+                            <div>(858) 123-4567</div>
                         </div>
                     </div>
                 </div>

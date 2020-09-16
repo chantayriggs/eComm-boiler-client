@@ -16,10 +16,8 @@
         box-shadow: 0 0 17px rgba(0,0,0,0.1);
         height: 500px;
         width: 600px;
-        display: flex;
+        @include center-flex;
         border-radius: 3px;
-        align-items: center;
-        justify-content: center;
         
 
         img {

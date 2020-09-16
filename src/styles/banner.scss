@@ -1,9 +1,7 @@
 .banner-wrapper {
+    @include center-flex;
     height: 100px;
     background-color: $banner;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     letter-spacing: 2px;
 
     .banner {

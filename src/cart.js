@@ -51,7 +51,10 @@ const Cart = props => {
                                             <i class="fas fa-arrow-left"></i>
                                             <div>Continue Shopping</div>
                                         </NavLink>
-                                        <div>Subtotal ${}</div>
+                                        <div className="sub-checkout" >
+                                            <div>Subtotal ${}</div>
+                                            <button>Checkout</button>
+                                        </div>
                                     </div>
                             </div>
                             <div className="payment">Payment Stuff Will Go Here</div>

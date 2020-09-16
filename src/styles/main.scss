@@ -8,6 +8,36 @@ $highlight: green;
 $banner: #f7f8fb;
 $footer: #202425;
 
+@mixin center-flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin for-button {
+    font-family: 'Raleway', sans-serif;
+    display:inline-block;
+    letter-spacing: 1px;
+    padding: 13px;
+    border:0.1em solid $highlight;
+    margin:0 0.3em 0.3em 0;
+    border-radius:0.12em;
+    box-sizing: border-box;
+    text-decoration:none;
+    text-align:center;
+    color:$highlight;
+    background-color: white;
+    transition: all 0.3s;
+    width: 120px;
+    outline: none;
+}
+
+@mixin for-button-hover {
+    background-color:$highlight;
+    color:white;
+    cursor: pointer;
+}
+
 
 @import "./navbar.scss";
 @import "./banner.scss";
@@ -17,3 +47,5 @@ $footer: #202425;
 @import "./products.scss";
 @import "./product-detail.scss";
 @import "./cart.scss";
+
+
