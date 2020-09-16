@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 
 import { NavLink } from "react-router-dom"
 
-import Logo from "./images/logo.jpg"
+import Logo from "../images/logo.jpg"
 
 
 const Navbar = () => { 

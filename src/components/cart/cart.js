@@ -2,11 +2,11 @@ import React, { useEffect, useState } from 'react'
 import { NavLink } from "react-router-dom"
 
 
-import Banner from "./banner"
+import Banner from "../banner"
 import CartItem from "./cartItem"
 
 
-import mockProducts from "./mockProducts"
+import mockProducts from "../../mockProducts"
 
 const Cart = props => {
 

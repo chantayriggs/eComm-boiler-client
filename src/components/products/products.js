@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from 'react'
-import Banner from "./banner"
+
+import Banner from "../banner"
 
 import ProductCard from "./productCard"
 
-import mockProducts from "./mockProducts"
+import mockProducts from "../../mockProducts"
 
 const Products = props => {
 

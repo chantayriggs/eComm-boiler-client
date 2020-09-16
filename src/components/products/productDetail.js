@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 
-import mockProducts from "./mockProducts"
-import Banner from "./banner"
+import mockProducts from "../../mockProducts"
+import Banner from "../banner"
 
 const ProductDetail = props => {
 

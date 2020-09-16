@@ -1,7 +1,7 @@
 import React from 'react'
 import { NavLink } from "react-router-dom"
 
-import Logo from "./images/logo_only.jpg"
+import Logo from "../images/logo_only.jpg"
 
 const Footer = props => {
     return (
