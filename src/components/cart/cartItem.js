@@ -1,21 +1,44 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState, useContext } from 'react'
+
+import { StateContext } from "../../context/stateContext"
 
 const CartItem = props => {
 
-
-    const [quantity, setQuantity] = useState(props.item.quantity)
+    const stateContext = useContext(StateContext)
 
     const handleQuantityChange = operation => {
-        if ( operation === "-" && quantity !== 1  ) {
-            setQuantity(quantity - 1)
-            props.sendTotal(props.item.price, "minus")
+        
+        let newCart = []
 
-        }
-        if ( operation === "+" ) {
-            setQuantity(quantity + 1)
-            props.sendTotal(props.item.price, "add")
-        }
+        stateContext.cartItems.map( cartItem => {
+            let changedItem = cartItem
+            if (cartItem._id === props.item._id) {
+                if (operation === "-") changedItem.quantity -= 1
+                if (operation === "+") changedItem.quantity += 1
+            }
+            newCart.push(changedItem)
+        })
+        stateContext.setCartItems(newCart)
+        props.getTotal()
     }
+
+
+
+    const deleteCartItem = () => {
+        let oldCart = stateContext.cartItems
+        let newCart = []
+        oldCart.map( product => {
+            if (product._id !== props.item._id) {
+                newCart.push(product)
+            } 
+        })
+        stateContext.setCartItems(newCart)
+        props.getTotal()
+    }
+
+    useEffect( () => {
+        props.getTotal()
+    },)
 
 
     return (
@@ -25,12 +48,12 @@ const CartItem = props => {
                 </div>
                 <div>{props.item.name}</div>
                 <div className="quantity">
-                    <i onClick={ () => handleQuantityChange("-")} class="fas fa-minus"></i>
-                    <div className="number">{quantity}</div>
-                    <i onClick={ () => handleQuantityChange("+")} class="fas fa-plus"></i>
+                    <i onClick={ ()=> handleQuantityChange("-")} class="fas fa-minus"></i>
+                    <div className="number">{props.item.quantity}</div>
+                    <i onClick={ ()=> handleQuantityChange("+")} class="fas fa-plus"></i>
                 </div>
-                <div className="price">$ {(props.item.price * quantity).toFixed(2) }</div>
-                <div onClick={ () => props.handleItemDelete(props.item) }><i class="fas fa-times"></i></div>
+                <div className="price">$ {(props.item.price * props.item.quantity).toFixed(2) }</div>
+                <div onClick={ ()=> deleteCartItem() }><i class="fas fa-times"></i></div>
             </div>
     )
 }

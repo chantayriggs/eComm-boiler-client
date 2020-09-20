@@ -1,12 +1,13 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState, useContext } from 'react'
+
+import { StateContext } from "../../context/stateContext"
 
 import Banner from "../banner"
-
 import ProductCard from "./productCard"
 
-import mockProducts from "../../mockProducts"
+const Products = () => {
 
-const Products = props => {
+    const stateContext = useContext(StateContext)
 
     const [ category, setCategory ] = useState("All Products")
     const [ categoryList, setCategoryList] = useState(null)
@@ -15,7 +16,7 @@ const Products = props => {
 
     const getCategories = () => {
         let categories = {}
-        mockProducts.map( product => {
+        stateContext.allProducts.map( product => {
             if ( categories[product.category] > 0) {
                 categories[product.category] += 1
             } else {
@@ -29,30 +30,31 @@ const Products = props => {
     const handleCategoryClick = category => {
         setCategory(category)
 
-        let productsToShow = []
-        untouchedProducts.map( product => {
-            if (product.category === category) productsToShow.push(product)
-        })
-
-        setShownProducts(productsToShow)
-        
+        if (category === "All Products") {
+            setShownProducts(stateContext.allProducts)
+        } else {
+            let productsToShow = []
+            untouchedProducts.map( product => {
+                if (product.category === category) productsToShow.push(product)
+            })
+    
+            setShownProducts(productsToShow)
+        }
     }
 
     useEffect( () => {
-
-        // get products from app.js, where the axios call to get all products will be made
-
-        setShownProducts(mockProducts)
-        setUntouchedProducts(mockProducts)
+        setShownProducts(stateContext.allProducts)
+        setUntouchedProducts(stateContext.allProducts)
         getCategories()
     }, [])
+
 
 
     return (
         
         <div>
-            {/* TODO loading */}
-            { categoryList === null ||  shownProducts === null ? <div></div> : 
+            
+            { categoryList === null ? <div></div> : 
             <div>
                 <Banner title={"All Products"} path={"Products"} />
                 <div className="products-page-wrapper">
@@ -62,7 +64,13 @@ const Products = props => {
                             <div className="left">
                                 <div className="header">Filter Categories</div>
                                 <div className="categories-list">
-
+                                    <div onClick={ () => handleCategoryClick("All Products")} className={ category === "All Products" ? "category chosen" : "category" }>
+                                                <div > 
+                                                    <i class="fas fa-angle-right"></i>
+                                                    <span >All Products</span>
+                                                </div>
+                                                <div className="amount">({stateContext.allProducts.length})</div>
+                                            </div>
                                     {
                                         Object.entries(categoryList).map( currentCategory => (
                                             <div onClick={ () => handleCategoryClick(currentCategory[0])} className={ category === currentCategory[0] ? "category chosen" : "category" }>
@@ -80,7 +88,7 @@ const Products = props => {
                                 <div className="product-card-wrapper">
                                     {
                                         shownProducts.map( product => (
-                                            <ProductCard cartItems={props.cartItems} setCartItems={props.setCartItems} product={product} />
+                                            <ProductCard cartItems={stateContext.cartItems} setCartItems={stateContext.setCartItems} product={product} />
                                         ))
                                     }
                                 </div>
@@ -96,3 +104,6 @@ const Products = props => {
 }
 
 export default Products
+
+
+
