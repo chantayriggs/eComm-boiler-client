@@ -11,6 +11,36 @@ import mockProducts from "../../mockProducts"
 const Cart = props => {
 
     const [ fullItems, setFullItems ] = useState([])
+    const [ total, setTotal ] = useState(0)
+
+
+    const sendTotal = (price, direction) => {
+        if (direction === "add") setTotal(total + Number(price))
+        if (direction === "minus") setTotal(total - Number(price))
+    }
+
+    const handleItemDelete = item => {
+        let newFullItems = []
+        fullItems.map( product => {
+            if (product._id !== item._id ) {
+                newFullItems.push(product)
+            }
+        })
+        setFullItems(newFullItems)
+
+
+        let newCartItems = []
+        props.cartItems.map( product => {
+            if (product !== item._id ) {
+                newCartItems.push(item._id)
+            }
+        })
+        props.setCartItems(newCartItems)
+
+        setTotal(total - (item.price * item.quantity))
+
+    }
+
 
     useEffect( () => {
         let toBeAdded = []
@@ -22,6 +52,17 @@ const Cart = props => {
                 } 
         })
         fullItems.concat(toBeAdded)
+        
+
+
+        // setting total
+        let tempTotal = 0
+        toBeAdded.map( product => {
+            tempTotal += product.price * product.quantity
+            console.log(tempTotal)
+        })
+        setTotal(tempTotal)
+
         setFullItems(toBeAdded)
 
     }, [])
@@ -41,7 +82,7 @@ const Cart = props => {
 
                                 {
                                     fullItems.map( item => (
-                                        <CartItem item={item} />
+                                        <CartItem handleItemDelete={handleItemDelete} sendTotal={sendTotal} item={item} />
 
                                     ))         
 
@@ -52,7 +93,7 @@ const Cart = props => {
                                             <div>Continue Shopping</div>
                                         </NavLink>
                                         <div className="sub-checkout" >
-                                            <div>Subtotal ${}</div>
+                                            <div className="subtotal">{`Subtotal $${total.toFixed(2)}`}</div>
                                             <button>Checkout</button>
                                         </div>
                                     </div>

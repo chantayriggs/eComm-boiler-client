@@ -4,7 +4,7 @@ body {
     font-weight: 200;
 }
 
-$highlight: green;
+$highlight: #76BA1A;
 $banner: #f7f8fb;
 $footer: #202425;
 
@@ -47,5 +47,6 @@ $footer: #202425;
 @import "./products.scss";
 @import "./product-detail.scss";
 @import "./cart.scss";
-
+@import "./carousel.scss";
+@import "./offers.scss";
 

@@ -1,11 +1,10 @@
 .footer {
     height: 300px; 
-    background-color: $footer;
+    background-color: black;
     color: white;
     @include center-flex;
     letter-spacing: 1px;
     
-
 
     .content-wrapper {
         width: 60%;
@@ -41,10 +40,12 @@
 
         .header {
             font-weight: 700;
-            font-size: 1.2em;
+            text-transform: uppercase;
+            font-size: 1.1em;
             letter-spacing: 2px;
             padding-bottom: 25px;
         }
+
 
         .links-wrapper, .category-wrapper, .info-wrapper {
             display: flex;

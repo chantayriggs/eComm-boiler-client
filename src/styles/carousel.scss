@@ -1,0 +1,58 @@
+.hello {
+    margin-left: 150px;
+    height: 565px;
+    width: 700px;
+    font-size: 1.3em;
+    position: absolute;
+    z-index: 1;
+    color: White;
+    display: flex;
+    align-items: center;
+    letter-spacing: 1px;
+
+    .animate {
+        animation: flickerAnimation 10s infinite;
+
+        @keyframes flickerAnimation { 
+            0%   { opacity:0; }
+            20%  { opacity:1; }
+            80%  { opacity:1; }
+            100% { opacity:0; }
+        }
+    }
+
+    .wrapper {
+
+        display: grid;
+        grid-template-rows: .9fr 2fr 1fr;
+        height: 250px;
+        width: 700px;
+
+        .header {
+            font-size: 2em;
+            font-weight: 700;
+            
+        }
+
+        .details {
+            width: 700px;
+            white-space: pre-line;
+            line-height: 40px;
+            transition: 1s;
+        }
+    
+        button {
+            @include for-button;
+            background-color: transparent;
+            color: white;
+            font-weight: 700;
+            border: 2px solid white;
+            height: 50px;
+    
+            &:hover {
+                @include for-button-hover;
+                border: 3px solid $highlight;
+            }
+        }
+    }
+}

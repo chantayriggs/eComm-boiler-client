@@ -12,7 +12,7 @@
         font-weight: 700;
     }
     .products-page {
-        width: 60%;
+        width: 1050px;
 
         .product-content-wrapper {
             display: grid;
@@ -38,7 +38,7 @@
                     justify-content: space-between;
                     padding: 10px 0px;
                     cursor: pointer;
-                    transition: 0.2s;
+                    transition: 0.5s;
 
                     &:hover {
                         color: $highlight;
@@ -74,7 +74,7 @@
     border-radius: 3px;
     box-shadow: 0 0 7px rgba(0,0,0,0.1);
     height: 200px;
-    width: 95%;
+    width: 800px;
     display: grid;
     grid-template-columns: 1.1fr 2.5fr .8fr .2fr;
     align-items: center;

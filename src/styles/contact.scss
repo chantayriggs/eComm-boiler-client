@@ -7,9 +7,10 @@
 
     .options-wrapper {
         padding: 70px 0px 40px 0px;
-        width: 70%;
+        width: 1150px;
         display: flex;
         justify-content: space-between;
+    
 
         .option {
             text-align: center;
@@ -40,6 +41,9 @@
 
             .info {
                 color: gray;
+                font-family: sans-serif;
+                font-weight: 100;
+                font-size: .9em;
             }
         }
 
@@ -48,7 +52,7 @@
 
     .form-map-wrapper {
         height: 600px;
-        width: 70%;
+        width: 1150px;
         margin-bottom: 100px;
         display: grid;
         grid-template-columns: 1fr 1fr;

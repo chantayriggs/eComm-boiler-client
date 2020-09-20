@@ -25,7 +25,7 @@ const Contact = () => {
                     <div className="option" >
                         <i class="fas fa-phone"></i>
                         <div className="description" >Phone</div>
-                        <div className="info">(858) 123-4567</div>
+                        <div className="info number">(858) 123-4567</div>
                     </div>
                 </div>
 

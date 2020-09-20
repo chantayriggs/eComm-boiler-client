@@ -8,18 +8,15 @@ const CartItem = props => {
     const handleQuantityChange = operation => {
         if ( operation === "-" && quantity !== 1  ) {
             setQuantity(quantity - 1)
+            props.sendTotal(props.item.price, "minus")
 
         }
         if ( operation === "+" ) {
             setQuantity(quantity + 1)
+            props.sendTotal(props.item.price, "add")
         }
-        props.item.quantity = quantity
-        console.log(props.item.quantity)
     }
 
-    // useEffect( () => {
-
-    // }, [])
 
     return (
             <div className="cart-item">
@@ -33,7 +30,7 @@ const CartItem = props => {
                     <i onClick={ () => handleQuantityChange("+")} class="fas fa-plus"></i>
                 </div>
                 <div className="price">$ {(props.item.price * quantity).toFixed(2) }</div>
-                <div><i class="fas fa-times"></i></div>
+                <div onClick={ () => props.handleItemDelete(props.item) }><i class="fas fa-times"></i></div>
             </div>
     )
 }

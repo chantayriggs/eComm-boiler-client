@@ -1,42 +1,74 @@
 const mockProducts = [
     {
-        _id: "sjkahg;sdgha",
-        name: "Name of product",
+        _id: (Math.floor(Math.random() * 100000)).toString(),
+        name: `Product ${Math.floor(Math.random() * 1000)}`,
         image_src: "https://source.unsplash.com/random",
-        price: 15.34,
-        category: "Category 1",
+        price: (Math.random() * 100).toFixed(2),
+        category:  `Category ${Math.ceil(Math.random() * 9)}`,
         description: "Vestibulum ut ipsum quis enim malesuada dignissim. Nulla eget molestie sem. Nullam tempus quis odio ultricies ornare. Cras eleifend quam sed metus scelerisque, ac convallis ligula dignissim"
     },
     {
-        _id: "sjkahg;sdghaasdf",
-        name: "Name of product",
+        _id: (Math.floor(Math.random() * 100000)).toString(),
+        name: `Product ${Math.floor(Math.random() * 1000)}`,
         image_src: "https://source.unsplash.com/random",
-        price: 15.34,
-        category: "Category 3",
+        price: (Math.random() * 100).toFixed(2),
+        category:  `Category ${Math.ceil(Math.random() * 9)}`,
         description: "Vestibulum ut ipsum quis enim malesuada dignissim. Nulla eget molestie sem. Nullam tempus quis odio ultricies ornare. Cras eleifend quam sed metus scelerisque, ac convallis ligula dignissim"
     },
     {
-        _id: "sjkahg;sdgha33f",
-        name: "Name of product",
+        _id: (Math.floor(Math.random() * 100000)).toString(),
+        name: `Product ${Math.floor(Math.random() * 1000)}`,
         image_src: "https://source.unsplash.com/random",
-        price: 15.34,
-        category: "Category 2",
+        price: (Math.random() * 100).toFixed(2),
+        category:  `Category ${Math.ceil(Math.random() * 9)}`,
         description: "Vestibulum ut ipsum quis enim malesuada dignissim. Nulla eget molestie sem. Nullam tempus quis odio ultricies ornare. Cras eleifend quam sed metus scelerisque, ac convallis ligula dignissim"
     },
     {
-        _id: "sjkahg;sdghasad33f",
-        name: "Name of product",
+        _id: (Math.floor(Math.random() * 100000)).toString(),
+        name: `Product ${Math.floor(Math.random() * 1000)}`,
         image_src: "https://source.unsplash.com/random",
-        price: 15.34,
-        category: "Category 8",
+        price: (Math.random() * 100).toFixed(2),
+        category: `Category ${Math.ceil(Math.random() * 9)}`,
         description: "Vestibulum ut ipsum quis enim malesuada dignissim. Nulla eget molestie sem. Nullam tempus quis odio ultricies ornare. Cras eleifend quam sed metus scelerisque, ac convallis ligula dignissim"
     },
     {
-        _id: "sjkahg;asdfffffffsdghasad33f",
-        name: "Name of product",
+        _id: (Math.floor(Math.random() * 100000)).toString(),
+        name: `Product ${Math.floor(Math.random() * 1000)}`,
         image_src: "https://source.unsplash.com/random",
-        price: 15.34,
-        category: "Category 9",
+        price: (Math.random() * 100).toFixed(2),
+        category:  `Category ${Math.ceil(Math.random() * 9)}`,
+        description: "Vestibulum ut ipsum quis enim malesuada dignissim. Nulla eget molestie sem. Nullam tempus quis odio ultricies ornare. Cras eleifend quam sed metus scelerisque, ac convallis ligula dignissim"
+    },
+    {
+        _id: (Math.floor(Math.random() * 100000)).toString(),
+        name: `Product ${Math.floor(Math.random() * 1000)}`,
+        image_src: "https://source.unsplash.com/random",
+        price: (Math.random() * 100).toFixed(2),
+        category:  `Category ${Math.ceil(Math.random() * 9)}`,
+        description: "Vestibulum ut ipsum quis enim malesuada dignissim. Nulla eget molestie sem. Nullam tempus quis odio ultricies ornare. Cras eleifend quam sed metus scelerisque, ac convallis ligula dignissim"
+    },
+    {
+        _id: (Math.floor(Math.random() * 100000)).toString(),
+        name: `Product ${Math.floor(Math.random() * 1000)}`,
+        image_src: "https://source.unsplash.com/random",
+        price: (Math.random() * 100).toFixed(2),
+        category:  `Category ${Math.ceil(Math.random() * 9)}`,
+        description: "Vestibulum ut ipsum quis enim malesuada dignissim. Nulla eget molestie sem. Nullam tempus quis odio ultricies ornare. Cras eleifend quam sed metus scelerisque, ac convallis ligula dignissim"
+    },
+    {
+        _id: (Math.floor(Math.random() * 100000)).toString(),
+        name: `Product ${Math.floor(Math.random() * 1000)}`,
+        image_src: "https://source.unsplash.com/random",
+        price: (Math.random() * 100).toFixed(2),
+        category:  `Category ${Math.ceil(Math.random() * 9)}`,
+        description: "Vestibulum ut ipsum quis enim malesuada dignissim. Nulla eget molestie sem. Nullam tempus quis odio ultricies ornare. Cras eleifend quam sed metus scelerisque, ac convallis ligula dignissim"
+    },
+    {
+        _id: (Math.floor(Math.random() * 100000)).toString(),
+        name: `Product ${Math.floor(Math.random() * 1000)}`,
+        image_src: "https://source.unsplash.com/random",
+        price: (Math.random() * 100).toFixed(2),
+        category:  `Category ${Math.ceil(Math.random() * 9)}`,
         description: "Vestibulum ut ipsum quis enim malesuada dignissim. Nulla eget molestie sem. Nullam tempus quis odio ultricies ornare. Cras eleifend quam sed metus scelerisque, ac convallis ligula dignissim"
     },
 
